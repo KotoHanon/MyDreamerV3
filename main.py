@@ -263,9 +263,6 @@ class DreamerV3:
             self.optimizer_actor.step()
 
     def update(self):
-        """
-        训练流程入口：先训练世界模型，再用想象Rollout训练Actor-Critic
-        """
         # Train World Model
         self.train_world_model(num_iters=5)
 
